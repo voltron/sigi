@@ -36,7 +36,7 @@ public interface IFooJS {
 ### Create Class Implementation ( Foo.java ). ###  
 Implement methods of interface and extend WebExtension abstract fbase class.
 
-<pre><code>public class Foo extends WebViewExtension implements IFooJS{}</code></pre>
+<pre><code>public class Foo extends AbstractWebViewExtension implements IFooJS{}</code></pre>
 
 ### Pass Activity's Context and WebView's Instance ###
 Constructor of class must pass in the activity's context and the webview instance.
@@ -71,7 +71,7 @@ private ArrayList<IWebViewExtension> extensions = new ArrayList<IWebViewExtensio
 
 /* ... deeper in the Activity ... */
 
-extensions.add(new Foo(this, webView));
+extensions.add(new Foo());
 </code></pre>
 
 ### Call it in JavaScript ###
