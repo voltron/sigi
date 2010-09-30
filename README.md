@@ -64,7 +64,6 @@ public String say(String word){
 In App.java (main app file), import your extension and create an arraylist of extensions and add your extension to the list inside the activity.
 
 <pre><code>
-
 import com.myapp.foo;
 
 /* In activity */
@@ -73,7 +72,6 @@ private ArrayList<IWebViewExtension> extensions = new ArrayList<IWebViewExtensio
 /* ... deeper in the Activity ... */
 
 extensions.add(new Foo(this, webView));
-
 </code></pre>
 
 ### Call it in JavaScript ###
