@@ -27,8 +27,7 @@ Creating a Sigi Extension
 ### Create Interface ( IFooJS.java ) ###
 Add methods that will only be exposed to window object in WebView.
 
-<pre><code>
-public interface IFooJS { 
+<pre><code>public interface IFooJS { 
 	public String say(String word);
 }
 </code></pre>
@@ -41,8 +40,7 @@ Implement methods of interface and extend WebExtension abstract fbase class.
 ### Pass Activity's Context and WebView's Instance ###
 Constructor of class must pass in the activity's context and the webview instance.
 
-<pre><code>	
-public Foo(Context context, WebView webView) {
+<pre><code>public Foo(Context context, WebView webView) {
 	super(context, webView);
 				
 	// Add JS interface
@@ -54,8 +52,7 @@ public Foo(Context context, WebView webView) {
 ### Implement Methods ###
 Implement interface methods in class definition.
 
-<pre><code>
-public String say(String word){
+<pre><code>public String say(String word){
 	return word+ " from Java";
 }
 </code></pre>
@@ -63,8 +60,7 @@ public String say(String word){
 ### Add Extensions ###
 In App.java (main app file), import your extension and create an arraylist of extensions and add your extension to the list inside the activity.
 
-<pre><code>
-import com.myapp.foo;
+<pre><code>import com.myapp.foo;
 
 /* In activity */
 private ArrayList<IWebViewExtension> extensions = new ArrayList<IWebViewExtension>();
@@ -77,8 +73,7 @@ extensions.add(new Foo());
 ### Call it in JavaScript ###
 In your JavaScript file, call method like so:
 
-<pre><code>
-var text = window.Foo.say('Text from JavaScript as well as ');
+<pre><code>var text = window.Foo.say('Text from JavaScript as well as ');
 alert(text); // alerts "Text from JavaScript as well as from Java"
 </code></pre>
 
