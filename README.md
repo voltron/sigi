@@ -37,15 +37,13 @@ Implement methods of interface and extend WebExtension abstract fbase class.
 
 <pre><code>public class Foo extends AbstractWebViewExtension implements IFooJS{}</code></pre>
 
-### Pass Activity's Context and WebView's Instance ###
-Constructor of class must pass in the activity's context and the webview instance.
+### Add the JavaScript Interface ###
 
 <pre><code>public Foo(Context context, WebView webView) {
 	super(context, webView);
 				
 	// Add JS interface
-	// Cast to IFooJS to only expose methods from the interface.
-	webView.addJavascriptInterface((IFooJS)this, "Foo");
+	webView.addJavascriptInterface(("Foo");
 }
 </code></pre>
 
