@@ -32,7 +32,7 @@ Add methods that will only be exposed to window object in WebView.
 }
 </code></pre>
 
-### Create Class Implementation ( Foo.java ). ###  
+### Create Class Implementation ( Foo.java ) ###  
 Implement methods of interface and extend WebExtension abstract fbase class.
 
 <pre><code>public class Foo extends AbstractWebViewExtension implements IFooJS{}</code></pre>
