@@ -33,17 +33,16 @@ Add methods that will only be exposed to window object in WebView.
 </code></pre>
 
 ### Create Class Implementation ###  
-Implement methods of interface and extend WebExtension abstract fbase class.
+Implement methods of interface and extend AbstractWebViewExtension abstract base class.
 
 <pre><code>public class Foo extends AbstractWebViewExtension implements IFooJS{}</code></pre>
 
-### Add the JavaScript Interface ###
+### Add the JavaScript Interface in initialize Method ###
 
-<pre><code>public Foo(Context context, WebView webView) {
-	super(context, webView);
-				
-	// Add JS interface
-	webView.addJavascriptInterface(("Foo");
+<pre><code>public void initialize()
+{
+		// Add JS interface
+		webView.addJavascriptInterface((IFooJS) this, "Foo");
 }
 </code></pre>
 
